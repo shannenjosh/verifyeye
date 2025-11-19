@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "AI Text Detection Tool",
   "scripts": {
-    "start": "echo 'Static site'"
+    "start": "echo 'Static site - no build needed'"
   },
+  "keywords": ["ai", "detection", "vercel"],
   "author": "shannenjosh",
   "license": "MIT"
 }
