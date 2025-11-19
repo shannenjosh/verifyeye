@@ -1,0 +1,10 @@
+{
+  "name": "verifyeye",
+  "version": "1.0.0",
+  "description": "AI Text Detection Tool",
+  "scripts": {
+    "start": "echo 'Static site'"
+  },
+  "author": "shannenjosh",
+  "license": "MIT"
+}
