@@ -1,0 +1,27 @@
+# Firebase Cloud Functions
+firebase-functions==0.4.0
+firebase-admin==6.2.0
+
+# PyTorch and Deep Learning
+torch==2.9.1
+torchvision==0.15.2
+
+# Transformers for NLP models
+transformers==4.35.0
+sentencepiece==0.1.99
+tokenizers==0.15.0
+
+# Scientific computing
+numpy==1.24.3
+scipy==1.11.3
+
+# Text processing
+nltk==3.8.1
+
+# Utilities
+requests==2.31.0
+python-dotenv==1.0.0
+
+# Optional: For better performance
+# accelerate==0.24.1
+# optimum==1.14.0

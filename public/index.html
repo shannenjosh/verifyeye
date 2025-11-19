@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Analysis Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🤖 AI Text Tools</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="detect.html">Detect</a></li>
+                <li><a href="summarize.html">Summarize</a></li>
+                <li><a href="generate.html">Generate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>AI-Powered Text Analysis</h1>
+            <p>Detect, Summarize, and Generate text using advanced AI models</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card" onclick="location.href='detect.html'">
+                <div class="icon">🔍</div>
+                <h2>AI Detection</h2>
+                <p>Check if text is AI-generated with advanced machine learning models</p>
+                <button class="btn">Try It</button>
+            </div>
+
+            <div class="feature-card" onclick="location.href='summarize.html'">
+                <div class="icon">📝</div>
+                <h2>Text Summarization</h2>
+                <p>Create concise summaries of long-form content instantly</p>
+                <button class="btn">Try It</button>
+            </div>
+
+            <div class="feature-card" onclick="location.href='generate.html'">
+                <div class="icon">✨</div>
+                <h2>Text Generation</h2>
+                <p>Generate creative content from simple prompts</p>
+                <button class="btn">Try It</button>
+            </div>
+        </section>
+
+        <section class="info">
+            <h2>About This Platform</h2>
+            <p>This platform uses state-of-the-art PyTorch models to provide powerful text analysis capabilities. Built with Firebase for scalable backend services.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Text Analysis Platform | Team Project</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>

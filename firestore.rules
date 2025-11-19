@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Results collection - allow read and write for all users
+    // (You can add authentication later)
+    match /results/{document=**} {
+      allow read: if true;
+      allow write: if true;
+    }
+    
+    // Analytics collection - read only
+    match /analytics/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+    
+    // User data (if you implement user accounts later)
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🤖 AI Text Tools</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detect.html">Detect</a></li>
+                <li><a href="summarize.html" class="active">Summarize</a></li>
+                <li><a href="generate.html">Generate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="tool-container">
+            <h1>📝 Text Summarization</h1>
+            <p>Paste long text below to generate a concise summary</p>
+
+            <div class="input-section">
+                <label for="summaryText">Enter Text to Summarize:</label>
+                <textarea 
+                    id="summaryText" 
+                    placeholder="Paste your long text here..."
+                ></textarea>
+                <div class="char-count">
+                    <span id="charCount">0</span> characters
+                </div>
+            </div>
+
+            <div class="controls">
+                <label>
+                    Summary Length:
+                    <select id="lengthRatio">
+                        <option value="0.25">Short (25%)</option>
+                        <option value="0.5" selected>Medium (50%)</option>
+                        <option value="0.75">Long (75%)</option>
+                    </select>
+                </label>
+
+                <label>
+                    Format:
+                    <select id="formatType">
+                        <option value="paragraph">Paragraph</option>
+                        <option value="bullets">Bullet Points</option>
+                    </select>
+                </label>
+            </div>
+
+            <button class="btn" id="summarizeBtn">Generate Summary</button>
+
+            <div class="error" id="errorMsg"></div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Generating summary...</p>
+            </div>
+
+            <div class="result-section" id="results">
+                <div class="result-header">
+                    <h2>Summary</h2>
+                    <button class="copy-btn" id="copyBtn">Copy Summary</button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="originalWords">--</div>
+                        <div class="stat-label">Original Words</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="summaryWords">--</div>
+                        <div class="stat-label">Summary Words</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="compressionRatio">--</div>
+                        <div class="stat-label">Compression</div>
+                    </div>
+                </div>
+
+                <div class="result-text" id="summaryResult">
+                    Summary will appear here...
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Text Analysis Platform</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="config.js"></script>
+    <script src="summarize.js"></script>
+</body>
+</html>
